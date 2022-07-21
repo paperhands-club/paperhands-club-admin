@@ -68,6 +68,9 @@ const Sidebar = () => {
 			<Menu.Item key="/components" onClick={() => router.push('/components')} icon={<DeploymentUnitOutlined />}>
 				<span>Components</span>
 			</Menu.Item>
+			<Menu.Item key="/orders" onClick={() => router.push('/orders')} icon={<DeploymentUnitOutlined />}>
+				<span>Orders</span>
+			</Menu.Item>
 		</Menu>
 	);
 };
