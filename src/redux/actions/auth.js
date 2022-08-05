@@ -21,15 +21,26 @@ export const actionLogin = async (payload = {}, next = f => f) => {
 	return {
 		type: SINGLE_API,
 		payload: {
-			url: '/users/login',
+			url: '/admin/login',
 			options: { method: 'POST' },
 			payload,
 			successType: 'LOGIN_SUCCESS',
 			next: async (err, response = {}) => {
+				console.log(666);
+				console.log(response);
+				console.log(err);
+				// if (!err) {
+				// 	AuthStorage.value = {
+				// 		token: response.id,
+				// 		userId: response.userId,
+				// 		role: response.user.role,
+				// 	};
+				// }
+
 				if (!err) {
 					AuthStorage.value = {
-						token: response.id,
-						userId: response.userId,
+						token: response.accessToken.token,
+						userId: response.user,
 						role: response.user.role,
 					};
 				}
