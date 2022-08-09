@@ -6,7 +6,7 @@ export const actionUpdateProfile = async (payload = {}, next = f => f) => {
 	return {
 		type: SINGLE_API,
 		payload: {
-			url: '/users/' + AuthStorage.userId,
+			url: '/admin/' + AuthStorage.userId,
 			payload,
 			successType: 'EDIT_PROFILE_SUCCESS',
 			options: {
@@ -21,7 +21,7 @@ export const actionLogin = async (payload = {}, next = f => f) => {
 	return {
 		type: SINGLE_API,
 		payload: {
-			url: '/users/login',
+			url: '/admin/login',
 			options: { method: 'POST' },
 			payload,
 			successType: 'LOGIN_SUCCESS',
