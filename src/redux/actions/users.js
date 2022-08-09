@@ -4,7 +4,7 @@ import { SINGLE_API } from 'src/redux/actions/types';
 import applyURIFilter from 'src/utils/apply-url-filter';
 
 export const MODEL_NAME = 'USERS';
-export const MODEL_PLURAL = 'users';
+export const MODEL_PLURAL = 'admin';
 
 export const create = async (payload = {}, next = f => f) => {
 	return {

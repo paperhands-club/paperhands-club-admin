@@ -18,7 +18,7 @@ const OrdersPage = (props) => {
 
 	return (
 		<>
-			<Head title="Antd Demo" />
+			<Head title="Orders" />
 			<OrdersList />
 		</>
 	);
