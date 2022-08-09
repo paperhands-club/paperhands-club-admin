@@ -3,7 +3,7 @@ import React from 'react';
 
 // import classes from './style.less';
 
-import { html } from '../../../README.md';
+//import { html } from '../../../README.md';
 
 const propTypes = {
 	// classes: PropTypes.object.isRequired,
@@ -16,11 +16,11 @@ const defaultProps = {
 const Index = (props) => {
 	// const { } = props;
 
-	return (
-		<div className="">
-			<div dangerouslySetInnerHTML={{ __html: html }} />
-		</div>
-	);
+	// return (
+	// 	<div className="">
+	// 		<div dangerouslySetInnerHTML={{ __html: html }} />
+	// 	</div>
+	// );
 };
 
 Index.propTypes = propTypes;
