@@ -2,7 +2,7 @@
 
 export default function handler(req, res) {
 	res.status(200).json({
-		statusCode: 200,
+		code: 200,
 		result: [
 			{
 				'createdAt': '2021-07-17T00:18:14.747Z',

@@ -2,7 +2,7 @@
 
 export default function handler(req, res) {
 	res.status(200).json({
-		statusCode: 200,
+		code: 200,
 		result: {
 			avatar: 'https://i.pravatar.cc/150?img=37',
 			birthDate: '1989-12-31T17:00:00.000Z',

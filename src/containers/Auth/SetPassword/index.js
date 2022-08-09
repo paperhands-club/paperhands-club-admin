@@ -50,7 +50,7 @@ const SetPassword = (props) => {
 	};
 
 	if (!token) {
-		return <Error statusCode={404} />;
+		return <Error code={404} />;
 	}
 
 	return (

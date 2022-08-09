@@ -78,7 +78,7 @@ const fetchApi = async ({ url, options, payload = {}, dispatch = f => f } = mand
 
 		const data = await response.json();
 
-		if (response.status !== 200 || data.statusCode !== 200) {
+		if (response.status !== 200 || data.code !== 200) {
 			throw data;
 		}
 
@@ -96,7 +96,7 @@ const fetchApi = async ({ url, options, payload = {}, dispatch = f => f } = mand
 			});
 		}
 
-		if (err.statusCode === 403 || err.statusCode === 401) {
+		if (err.code === 403 || err.code === 401) {
 			// AuthStorage.destroy();
 			// dispatch({ type: 'LOGOUT_SUCCESS' });
 			if (process.browser) {
