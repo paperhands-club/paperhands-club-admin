@@ -43,7 +43,14 @@ export default function handler(req, res) {
 			}
 		});
 
-		
+		// 登入失敗res
+		// res.status(400).json({
+		// 	code: 400,
+		// 	msg: "密码错误，请检查是否输入正确",
+		// 	result: ""
+		// });
+
+
 	} else {
 		res.status(404).json({ message: 'Api is not found' });
 	}

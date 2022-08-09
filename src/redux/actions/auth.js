@@ -18,6 +18,7 @@ export const actionLogin = async (payload = {}, next = f => f) => {
 				// 	};
 				// }
 
+				// api回傳的code只有200時，err會為null
 				if (!err) {
 					AuthStorage.value = {
 						token: response.accessToken.token,
