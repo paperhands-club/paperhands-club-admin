@@ -16,6 +16,8 @@ class User extends Component {
   };
   getUsers = async () => {
     const result = await getUsers()
+    console.log(999);
+    console.log(result);
     const { users, status } = result.data
     if (status === 0) {
       this.setState({

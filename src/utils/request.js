@@ -65,6 +65,10 @@ service.interceptors.response.use(
   // },
   (error) => {
     console.log("err" + error); // for debug
+    if(!error.response){
+      return Promise.reject(error);
+    }
+
     const { status } = error.response;
     if (status === 403) {
       Modal.confirm({

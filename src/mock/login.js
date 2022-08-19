@@ -8,7 +8,7 @@ const users = {
   "admin-token": {
     id: "admin",
     role: "admin",
-    name: "管理員湯米",
+    name: "管理員湯米666",
     avatar: "https://s1.ax1x.com/2020/04/28/J5hUaT.jpg",
     description: "拥有系统内所有菜单和路由权限",
   },

@@ -48,5 +48,11 @@ const menuList = [
     icon: "usergroup-add",
     roles:["admin"]
   },
+  {
+    title: "訂單管理",
+    path: "/order",
+    icon: "usergroup-add",
+    roles:["admin"]
+  },
 ];
 export default menuList;

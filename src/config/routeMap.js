@@ -8,6 +8,7 @@ const EditorPage = Loadable({loader: () => import(/*webpackChunkName:'EditorPage
 const Table = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/table'),loading: Loading});
 const Error404 = Loadable({loader: () => import(/*webpackChunkName:'Error404'*/'@/views/error/404'),loading: Loading});
 const User = Loadable({loader: () => import(/*webpackChunkName:'User'*/'@/views/user'),loading: Loading});
+const Order = Loadable({loader: () => import(/*webpackChunkName:'Order'*/'@/views/order'),loading: Loading});
 
 export default [
   { path: "/dashboard", component: Dashboard, roles: ["admin","editor","guest"] },
@@ -17,5 +18,6 @@ export default [
   { path: "/permission/editorPage", component: EditorPage, roles: ["editor"] },
   { path: "/table", component: Table, roles: ["admin","editor"] },
   { path: "/user", component: User, roles: ["admin"] },
+  { path: "/order", component: Order, roles: ["admin"] },
   { path: "/error/404", component: Error404 },
 ];
