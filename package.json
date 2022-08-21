@@ -5,11 +5,21 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@ant-design/compatible": "^1.1.2",
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-components": "^1.1.10",
+    "@ant-design/pro-descriptions": "^1.4.7",
+    "@ant-design/pro-form": "^1.13.10",
+    "@ant-design/pro-table": "^2.25.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@toast-ui/react-editor": "^2.1.0",
-    "antd": "^3.17.0",
+    "@types/jest": "^28.1.5",
+    "@types/node": "^18.0.4",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "antd": "^4.20.6",
     "axios": "^0.19.2",
     "clipboard": "^2.0.6",
     "draft-js": "^0.11.5",
@@ -24,12 +34,12 @@
     "less-loader": "^5.0.0",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
+    "react": "^18.2.0",
     "react-beautiful-dnd": "^13.0.0",
     "react-countup": "^4.3.3",
     "react-custom-scrollbars": "^4.2.1",
     "react-document-title": "^2.0.3",
-    "react-dom": "^16.13.1",
+    "react-dom": "^18.2.0",
     "react-draft-wysiwyg": "^1.14.5",
     "react-loadable": "^5.5.0",
     "react-redux": "^7.2.0",
@@ -40,6 +50,7 @@
     "redux-thunk": "^2.3.0",
     "screenfull": "^5.0.2",
     "script-loader": "^0.7.2",
+    "umi-request": "^1.4.0",
     "xlsx": "^0.16.0"
   },
   "scripts": {
@@ -50,7 +61,8 @@
     "commit": "git cz"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "react/react-in-jsx-scope": "off"
   },
   "browserslist": {
     "production": [

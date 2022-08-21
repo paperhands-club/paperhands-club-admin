@@ -11,7 +11,6 @@ class EditOrderForm extends Component {
       confirmLoading,
       currentRowData,
     } = this.props;
-    const { getFieldDecorator } = form;
     const { id, quantity, price, type } = currentRowData;
     const formItemLayout = {
       labelCol: {
@@ -30,37 +29,24 @@ class EditOrderForm extends Component {
         confirmLoading={confirmLoading}
       >
         <Form {...formItemLayout}>
-          <Form.Item label="用户ID:">
-            {getFieldDecorator("id", {
-              initialValue: id,
-            })(<Input disabled />)}
+          <Form.Item label="用户ID:" name="id">
+            <Input disabled />
           </Form.Item>
-          <Form.Item label="訂單數量:">
-            {getFieldDecorator("quantity", {
-              rules: [{ required: true, message: "请输入訂單數量!" }],
-              initialValue: quantity,
-            })(
+          <Form.Item label="訂單數量:" name="quantity">
               <Select style={{ width: 120 }}>
                 <Select.Option value={1}>single</Select.Option>
                 <Select.Option value={2}>bundle</Select.Option>
               </Select>
-            )}
           </Form.Item>
-          <Form.Item label="訂單價格:">
-            {getFieldDecorator("price", {
-              initialValue: price,
-            })(<Input placeholder="请输入訂單價格" />)}
+          <Form.Item label="訂單價格:" name="price">
+            <Input placeholder="请输入訂單價格" />
           </Form.Item>
-          <Form.Item label="訂單類型:">
-            {getFieldDecorator("type", {
-              initialValue: type,
-            })(
+          <Form.Item label="訂單類型:" name="type">
               <Select style={{ width: 120 }}>
                 <Select.Option value={0}>出錢包</Select.Option>
                 <Select.Option value={1}>出DC</Select.Option>
                 <Select.Option value={2}>填地址</Select.Option>
               </Select>
-            )}
           </Form.Item>
         </Form>
       </Modal>
@@ -68,4 +54,4 @@ class EditOrderForm extends Component {
   }
 }
 
-export default Form.create({ name: "EditOrderForm" })(EditOrderForm);
+export default EditOrderForm;
