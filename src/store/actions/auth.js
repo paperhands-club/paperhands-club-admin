@@ -3,7 +3,7 @@ import { reqLogin, reqLogout } from "@/api/login";
 import { setToken, removeToken } from "@/utils/auth";
 export const login = (username, password) => (dispatch) => {
   return new Promise((resolve, reject) => {
-    reqLogin({ username: username.trim(), password: password })
+    reqLogin({ name: username.trim(), password: password })
       .then((response) => {
         const { data } = response;
         if (data.status === 0) {
